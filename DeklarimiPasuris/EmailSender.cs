@@ -10,7 +10,7 @@ public class EmailSender : IEmailSender
         {
             EnableSsl = true,
             UseDefaultCredentials = false,
-            Credentials = new NetworkCredential("apksnotifier@gmail.com", "emgz ezym zvvh lgzz")
+            Credentials = new NetworkCredential("apksnotifier@gmail.com", "rnls mamw qxah cqwz")
         };
 
         client.DeliveryMethod = SmtpDeliveryMethod.Network;
