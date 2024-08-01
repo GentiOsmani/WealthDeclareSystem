@@ -1,28 +1,28 @@
 ﻿@model DeclarationModel
 
 <div class="card p-4">
-    <h3 class="text-primary fw-bold p-3 rounded" style="background-color: #d8ebff">Deklarimi i Pasurisë së @ViewBag.User</h3>
+    <h3 class="text-primary fw-bold p-3 rounded" style="background-color: #d8ebff">Wealth Declaration of @ViewBag.User</h3>
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Pasuritë e Paluajtshme</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Real Estate</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Pronësia</th>
-                <th>Lloji</th>
-                <th>Burimi</th>
-                <th>Vendi</th>
-                <th>Banka</th>
-                <th>Shuma</th>
+                <th>Ownership</th>
+                <th>Income Type</th>
+                <th>Source</th>
+                <th>Country</th>
+                <th>Bank</th>
+                <th>Amount</th>
             </tr>
         </thead>
         <tbody>
             @if (Model.IncomeModel is null)
             {
                 <tr>
-                    <td>Nuk ka të dhëna</td>
+                    <td>Unavailable Information</td>
                 </tr>
             }
             <tr>
@@ -38,19 +38,18 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Pasuritë e luajtshme mbi (3000.00) euro</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Movable Assets over (3000.00) Euro</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Pronësia</th>
-                <th>Lloji</th>
-                <th>Sipërfaqja</th>
-                <th>Vlera</th>
-                <th>Përfitimi</th>
-                <th>Data </th>
-                <th>Prejardhja</th>
-                <th>Të Veqanta</th>
+                <th>Ownership</th>
+                <th>Type</th>
+                <th>Area</th>
+                <th>Price</th>
+                <th>Origin</th>
+                <th>Date</th>
+                <th>Unique</th>
             </tr>
         </thead>
         <tbody>
@@ -67,7 +66,6 @@
                 <td>@Model.MovableAssetsModel?.Price</td>
                 <td>@Model.MovableAssetsModel?.Origine</td>
                 <td>@Model.MovableAssetsModel?.Date</td>
-                <td>@Model.MovableAssetsModel?.Origine</td>
                 <td>@Model.MovableAssetsModel?.Unique</td>
             </tr>
         </tbody>
@@ -75,18 +73,18 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Zotrimi i aksioneve në shoqëri tregtare</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Shareholding in Trading Companies</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Emërtimi</th>
-                <th>Lloji</th>
-                <th>Aksionet</th>
-                <th>Vlera</th>
-                <th>Përqindja</th>
-                <th>Data e Regjistrimit </th>
-                <th>Data e Blerjes</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Actions</th>
+                <th>Value</th>
+                <th>Percentage</th>
+                <th>Date Registred</th>
+                <th>Date Owned</th>
             </tr>
         </thead>
         <tbody>
@@ -110,15 +108,15 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Posedimi i letrave me vlerë</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Ownership of Bonds</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Emërtimi</th>
-                <th>Vlera</th>
-                <th>Prejardhja</th>
-                <th>Data</th>
+                <th>Name</th>
+                <th>Value Now</th>
+                <th>Origin</th>
+                <th>Date</th>
                 <th>Bonds</th>
             </tr>
         </thead>
@@ -141,18 +139,18 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Posedimi i kriptovalutave</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Ownership of Cryptocurrencies</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Emërtimi</th>
-                <th>Vlera tani</th>
-                <th>Vlera e blerë</th>
-                <th>Sasia</th>
-                <th>Data</th>
+                <th>Name</th>
+                <th>Value Now</th>
+                <th>Value Bought</th>
+                <th>Quantity</th>
+                <th>Date</th>
                 <th>Crypto </th>
-                <th>Prejardhja</th>
+                <th>Origin</th>
             </tr>
         </thead>
         <tbody>
@@ -176,18 +174,18 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Para të gatshme në llogari rrjedhëse</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Cash in Checking Accounts</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Lloji</th>
-                <th>Institutcioni</th>
-                <th>Vendi</th>
-                <th>Prejardhja</th>
-                <th>Lloji i Llogarisë</th>
-                <th>Pronësia</th>
-                <th>Vlera</th>
+                <th>Type</th>
+                <th>Institution</th>
+                <th>Country</th>
+                <th>Origin</th>
+                <th>Account Type</th>
+                <th>Owned</th>
+                <th>Value</th>
             </tr>
         </thead>
         <tbody>
@@ -211,21 +209,21 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Të drejtat dhe detyrimet financiare ndaj personave juridik ose fizik</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Financial Rights and Obligations to Legal or Physical Persons</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Kredit</th>
+                <th>Creditor</th>
                 <th>Debit</th>
-                <th>Arsyeja</th>
-                <th>Data e Fillimit</th>
-                <th>Data e Mbarimit</th>
-                <th>Kohëzgjatja (në muaj)</th>
-                <th>Vlera në fillim</th>
-                <th>Vlera në mbetur</th>
-                <th>Vlera në totale</th>
-                <th>Pronësia</th>
+                <th>Reason</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration (in months)</th>
+                <th>Started Value</th>
+                <th>Left Value</th>
+                <th>Total Value</th>
+                <th>Ownership</th>
             </tr>
         </thead>
         <tbody>
@@ -252,17 +250,17 @@
 </div>
 <div class="card p-2">
     <dv>
-        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Donacionet dhe shpenzimet</h5>
+        <h5 class="text-center text-dark text-capitalize fw-bold mt-3">Donations and Expenses</h5>
     </dv>
     <table class="table">
         <thead>
             <tr>
-                <th>Lloji</th>
-                <th>Vlera</th>
-                <th>Emërtimi</th>
-                <th>Data</th>
-                <th>Qëllimi</th>
-                <th>Pronësia</th>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Reason</th>
+                <th>Ownership</th>
             </tr>
         </thead>
         <tbody>

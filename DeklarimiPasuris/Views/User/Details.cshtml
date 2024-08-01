@@ -2,7 +2,7 @@
 @model User
 
 <div>
-    <h4>Shiko ose perditso perdoruesin</h4>
+    <h4>Check out or Update Account</h4>
 </div>
 <div class="card py-2 px-5">
     <form asp-action="Edit" asp-controller="User" enctype="multipart/form-data">
@@ -10,20 +10,20 @@
         <div class="row">
             <div class="col-4">
                 <div class="form-group">
-                    <label class="form-label" asp-for="FirstName">Emri</label>
+                    <label class="form-label" asp-for="FirstName">First Name</label>
                     <input asp-for="FirstName" class="form-control" />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    <label class="form-label" asp-for="MiddleName">Emri i Mesëm</label>
+                    <label class="form-label" asp-for="MiddleName">Middle Name</label>
                     <input asp-for="MiddleName" class="form-control" />
                 </div>
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    <label class="form-label" asp-for="LastName">Mbiemri</label>
+                    <label class="form-label" asp-for="LastName">Last Name</label>
                     <input asp-for="LastName" class="form-control" />
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-4">
                 <div class="form-group">
-                    <label class="form-label" asp-for="IdentityNumber">Numri Personal</label>
+                    <label class="form-label" asp-for="IdentityNumber">Identity Number</label>
                     <input asp-for="IdentityNumber" class="form-control" />
                     <span asp-validation-for="IdentityNumber" class="text-danger"></span>
 
@@ -41,7 +41,7 @@
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    <label class="form-label" asp-for="Municipality">Qyteti</label>
+                    <label class="form-label" asp-for="Municipality">Municipality</label>
                     <select asp-for="Municipality" asp-items="ViewBag.Munis" class="form-control">
                         <option disabled selected>Zgjedh qytetin</option>
                     </select>
@@ -49,24 +49,19 @@
 
                 </div>
             </div>
-            <div class="col-4">
-                <div class="form-group">
-                    <label class="form-label" asp-for="Image">Fotografia e Profilit</label>
-                    <input asp-for="Image" class="form-control" />
-                </div>
-            </div>
+            
         </div>
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label class="form-label" asp-for="Email">Adresa Elektronike</label>
+                    <label class="form-label" asp-for="Email">Email Address</label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
         </div>
         <div>
-            <button class="btn btn-primary">Ndrysho të Dhënat</button>
+            <button class="btn btn-primary">Change</button>
         </div>
     </form>
 </div>
