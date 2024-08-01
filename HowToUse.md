@@ -1,4 +1,4 @@
-# DeklarimiPasurisë
+# Wealth Declare System
 
 # FOR TEST PURPOSES ONLY
 **Admin Initials: 
